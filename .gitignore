@@ -3,6 +3,7 @@
 /parsedmarc/GeoLite2-Country*
 /elastic_data/
 parsedmarc.ini
+/kibana/kibana.yml
 
 /lib/
 /pyvenv.cfg
