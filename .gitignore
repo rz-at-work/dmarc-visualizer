@@ -3,3 +3,8 @@
 /parsedmarc/GeoLite2-Country*
 /elastic_data/
 parsedmarc.ini
+
+/lib/
+/pyvenv.cfg
+venv
+__pycache__
