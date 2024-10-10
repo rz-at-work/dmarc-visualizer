@@ -1,4 +1,4 @@
-FROM alpine:3.20 as pkg-builder
+FROM alpine:3.20 AS pkg-builder
 
 RUN apk upgrade --no-cache && \
     apk -U add \
@@ -41,7 +41,6 @@ FROM python:3.11-alpine3.20
 RUN apk add --update --no-cache libxml2-dev libxslt-dev perl
 RUN apk add --update --no-cache --virtual .build_deps build-base libffi-dev \
     && pip install parsedmarc \
-    && cpan -i Email::Outlook::Message \
     && apk del .build_deps
 
 RUN --mount=from=pkg-builder,source=/home/packager/packages/work,target=/packages \
